@@ -53,7 +53,7 @@ public class TriangleController implements Figure {
     }
 
     @Override
-    public double CalculateSurface() {
+    public double calculateSurface() {
         double c = calcAB();
         double b = calcAC();
         double a = calcBC();
@@ -62,7 +62,7 @@ public class TriangleController implements Figure {
     }
 
     @Override
-    public void Print() {
+    public void print() {
         System.out.println(
                 String.format(
 

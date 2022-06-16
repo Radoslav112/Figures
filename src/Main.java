@@ -1,4 +1,4 @@
-import controllers.CircleController;
+import controllers.circleController;
 import controllers.TriangleController;
 import interfaces.Figure;
 import models.Circle;
@@ -14,10 +14,10 @@ public class Main {
      * @param figures List of figures
      */
     private static void addFigures(List<Figure> figures){
-        figures.add(new CircleController(new Circle(12,3,5)));
+        figures.add(new circleController(new Circle(12,3,5)));
         figures.add(new TriangleController(new Triangle(new Point(2,3),new Point(4,12),new Point(12,13))));
         figures.add(new TriangleController(new Triangle(new Point(5,12),new Point(23,-12),new Point(-32,24))));
-        figures.add(new CircleController(new Circle(-12,3,5)));
+        figures.add(new circleController(new Circle(-12,3,5)));
     }
 
     public static void main(String[] args) {
@@ -27,8 +27,8 @@ public class Main {
         double sumArea=0;
 
         for(Figure figure:figures){
-            figure.Print();
-            sumArea+=figure.CalculateSurface();
+            figure.print();
+            sumArea+=figure.calculateSurface();
         }
 
         System.out.println(String.format("Summary area of all figure: %f\n",sumArea));
